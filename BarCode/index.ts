@@ -62,10 +62,11 @@ export class BarcodeGenerator implements ComponentFramework.StandardControl<IInp
 		this.RemoveChildItems();
 		if (this._isValid) {
 			this._imageBarCode = document.createElement("img");
-			this._imageBarCode.id = "barcode";
+			let cssId: number = Math.floor(Math.random() * (1000 - 0));
+			this._imageBarCode.id = "barcode"+cssId;
 			this._container.appendChild(this._imageBarCode);
 			try {
-				JsBarcode("#barcode", this._barCodeValue, {
+				JsBarcode("#barcode"+cssId, this._barCodeValue, {
 					format: this._format,
 					width: this._width,
 					height: this._height,
