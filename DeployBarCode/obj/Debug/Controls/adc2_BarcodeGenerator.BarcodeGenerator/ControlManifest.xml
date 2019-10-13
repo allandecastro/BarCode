@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<manifest>
+  <control namespace="BarcodeGenerator" constructor="BarcodeGenerator" version="0.0.1" display-name-key="Barcode Generator" description-key="BarCode is a barcode generator written in JavaScript (based on JsBarcode). It supports multiple barcode formats." control-type="standard" preview-image="img/preview.png" api-version="1.2.1">
+    <property name="barCodeValue" display-name-key="barCodeValue" description-key="Value of the barcode to be rendered." of-type="SingleLine.Text" usage="bound" required="true" default-value="7501031311309"/>
+    <property name="format" display-name-key="format" description-key="Define the format of the barcode used (ean/upc, code128, code39, itf, msi, pharmacode or codabar)." of-type="SingleLine.Text" usage="input" required="true" default-value="EAN13"/>
+    <property name="text" display-name-key="text" description-key="Allows you to enter a text to be displayed instead of the barcode." of-type="SingleLine.Text" usage="input" required="false" default-value=""/>
+    <property name="fontOptions" display-name-key="fontOptions" description-key="With fontOptions you can add bold or italic text to the barcode." of-type="SingleLine.Text" usage="input" required="false" default-value="bold"/>
+    <property name="font" display-name-key="font" description-key="Define the font used for the text in the generated barcode. This can be any default font or a font defined by a @font-face rule." of-type="SingleLine.Text" usage="input" required="true" default-value="monospace"/>
+    <property name="width" display-name-key="width" description-key="The width option is the width of a single bar." of-type="Whole.None" usage="input" required="true" default-value="2"/>
+    <property name="height" display-name-key="height" description-key="The height of the barcode." of-type="Whole.None" usage="input" required="true" default-value="100"/>
+    <property name="displayValue" display-name-key="displayValue" description-key="Allows you to display or not the value of the barcode or the chosen text." of-type="Whole.None" usage="input" required="true" default-value="1"/>
+    <property name="textAlign" display-name-key="textAlign" description-key="Set the horizontal alignment of the text. Can be left / center / right." of-type="SingleLine.Text" usage="input" required="true" default-value="center"/>
+    <property name="textPosition" display-name-key="textPosition" description-key="Set the vertical position of the text. Can be bottom / top." of-type="SingleLine.Text" usage="input" required="true" default-value="bottom"/>
+    <property name="textMargin" display-name-key="textMargin" description-key="Set the space between the barcode and the text." of-type="Whole.None" usage="input" required="true" default-value="2"/>
+    <property name="fontSize" display-name-key="fontSize" description-key="Set the size of the text." of-type="Whole.None" usage="input" required="true" default-value="20"/>
+    <property name="backgroundColor" display-name-key="backgroundColor" description-key="Set the background of the barcode." of-type="SingleLine.Text" usage="input" required="true" default-value="#ffffff"/>
+    <property name="lineColor" display-name-key="lineColor" description-key="Set the color of the bars and the text." of-type="SingleLine.Text" usage="input" required="true" default-value="#000000"/>
+    <property name="margin" display-name-key="margin" description-key="Set the space margin around the barcode. If nothing else is set, all side will inherit the margins property but can be replaced if you want to set them separably." of-type="Whole.None" usage="input" required="true" default-value="10"/>
+    <property name="marginTop" display-name-key="marginTop" description-key="Set the top space margin around the barcode." of-type="Whole.None" usage="input" required="true" default-value="0"/>
+    <property name="marginBottom" display-name-key="marginBottom" description-key="Set the bottom space margin around the barcode." of-type="Whole.None" usage="input" required="true" default-value="0"/>
+    <property name="marginLeft" display-name-key="marginLeft" description-key="Set the left space margin around the barcode." of-type="Whole.None" usage="input" required="true" default-value="0"/>
+    <property name="marginRight" display-name-key="marginRight" description-key="Set the right space margin around the barcode." of-type="Whole.None" usage="input" required="true" default-value="0"/>
+    <property name="flat" display-name-key="flat" description-key="Only for EAN8/EAN13" of-type="Whole.None" usage="input" required="false" default-value="0"/>
+    <resources>
+      <code path="bundle.js" order="1"/>
+      <img path="img/preview1.png"/>
+    </resources>
+    <built-by name="pac" version="0.4.3"/>
+  </control>
+</manifest>
