@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest>
-  <control namespace="BarcodeGenerator" constructor="BarcodeGenerator" version="0.0.1" display-name-key="Barcode Generator" description-key="BarCode is a barcode generator written in JavaScript (based on JsBarcode). It supports multiple barcode formats." control-type="standard" preview-image="img/preview.png">
-
-    <property name="barCodeValue" display-name-key="barCodeValue" description-key="Value of the barcode to be rendered." of-type="SingleLine.Text" usage="bound" required="true" default-value="7501031311309"/>
+  <control namespace="BarcodeGenerator" constructor="BarcodeGenerator" version="1.0.8" display-name-key="Barcode Generator" description-key="BarCode is a barcode generator written in JavaScript (based on JsBarcode). It supports multiple barcode formats." control-type="standard" preview-image="img/preview.png">
+    <property name="barCodeValue" display-name-key="barCodeValue" description-key="Value of the barcode to be rendered." of-type="SingleLine.Text" usage="bound" required="true" default-value="7501031311309" />
     <property name="format" display-name-key="format" description-key="Define the format of the barcode used (ean/upc, code128, code39, itf, msi, pharmacode or codabar)." of-type="SingleLine.Text" usage="input" required="true" default-value="EAN13" />
     <property name="text" display-name-key="text" description-key="Allows you to enter a text to be displayed instead of the barcode." of-type="SingleLine.Text" usage="input" required="false" default-value="" />
     <property name="fontOptions" display-name-key="fontOptions" description-key="With fontOptions you can add bold or italic text to the barcode." of-type="SingleLine.Text" usage="input" required="false" default-value="bold" />
@@ -22,10 +21,9 @@
     <property name="marginLeft" display-name-key="marginLeft" description-key="Set the left space margin around the barcode." of-type="Whole.None" usage="input" required="true" default-value="0" />
     <property name="marginRight" display-name-key="marginRight" description-key="Set the right space margin around the barcode." of-type="Whole.None" usage="input" required="true" default-value="0" />
     <property name="flat" display-name-key="flat" description-key="Only for EAN8/EAN13" of-type="Whole.None" usage="input" required="false" default-value="0" />
-
     <resources>
-      <code path="index.ts" order="1"/>
-      <img path='img/preview.png'/>
+      <code path="index.ts" order="1" />
+      <img path="img/preview.png" />
     </resources>
   </control>
 </manifest>
