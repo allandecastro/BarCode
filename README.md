@@ -27,7 +27,7 @@ Based on the following library : https://github.com/lindell/JsBarcode
 
 # Installation
 
-You can find the managed solution into ./DeployBarCode/ folder.
+You can find the managed solution into ./Deployment/ folder.
 
 Then you must follow these steps:
 
